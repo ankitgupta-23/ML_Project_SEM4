@@ -1,0 +1,81 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#login_form{
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border: 2px solid crimson;
+    border-radius: 5px;
+    margin: 30px auto;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#top_img{
+    width: 40%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: calc((350px - 30%)/2);
+    display: block;
+}
+
+#top_text{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10px;
+    font-family: cursive;
+    color: crimson;
+}
+
+#username,#pw{
+    margin-top: 20px;
+   /* border: 1px solid red; */
+    padding: auto;
+    margin: 30px 35px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid red; 
+    margin-left: 20px;
+    font-size: 1.3em;
+    padding: 5px;
+    
+}
+
+input[type = submit]{
+    width: 40%;
+    height: fit-content;
+    font-size: 1.6em;
+    border: none;
+    padding: 2px;
+    margin-top: 8px;
+    margin-left: calc((400px - 40%)/2);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(33, 129, 219);
+    border-radius: 3px;
+}
+
+input[type=submit]:hover{
+    background-color: crimson;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    background-color: rgb(253, 253, 253);
+}
+
+#error_message{
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 3px;
+}

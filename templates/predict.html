@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Model</title>
+    <style>
+        .img_form{
+            width: 320px;
+            height: 400px;
+            background-color: aquamarine;
+            margin: 45px auto;
+            border: 2px solid red;
+            border-radius: 5px;
+            box-shadow: 7px 10px 6px rgba(69, 71, 71,0.5),7px 20px 8px rgba(69, 71, 71,0.4);
+            padding: 10px;
+        }
+        form{
+            padding: 15px;
+        }
+
+        label,input{
+            margin: 8 auto;
+            font-size: 1.3em;
+
+        }
+        input{
+            margin-top: 30px;
+        }
+        p{
+            color: rgb(83, 27, 27);
+            font-size: 1.5em;
+            margin-top: 20px;
+            font-weight: 600;
+            font-family: monospace;
+            letter-spacing: 0.2;
+        }
+        input[type = submit]{
+            height: 40px;
+            width: 100px;
+            margin-left: 80px;
+            background-color: crimson;
+            color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+            box-shadow: 4px 8px 6px rgb(58, 57, 57);
+            cursor: pointer;
+        }
+        #result{
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'layout.html' %}
+    
+    {% block content %}
+    <div class="img_form">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="img">Upload MRI Image of Brain: </label><br>
+            <input type="file" name="img">
+            <input type="submit" value="Predict">
+            <p>Image should be a valid MRI image of Brain only</p>
+        </form>
+        <p id = "result">RESULT</p>
+        <p>{{result}}</p>
+        {% for message in get_flashed_messages() %}
+            <p id="error_message">{{ message }}</p>
+            {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>

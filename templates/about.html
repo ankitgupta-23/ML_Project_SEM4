@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>About</title>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="content">
+        <h2>--- About The Model ---</h2>
+        <p>The model is built using a Convolutional Neural Network or CNN.</p>
+        <p>
+            It is trained on a dataset of 257 labelled images of brain MRI.<br>
+            Dataset source: <a href = "https://www.kaggle.com/">Kaggle</a>
+        </p>
+        <p>The model is built using VGG16 state-of-the-art network model 
+        that is available in Keras.</p>
+        <p>The Model can classify Input image of Brain MRI in on of the two categories:<br>1. Brain Tumer detected<br>2. Brain Tumor not detected</p>
+        <br><p>The following Graph shows the accuracy and loss information of the model on training and testing dataset:</p><br>
+        <img src="../static/img/plot.jpg" alt="Plot.jpg" height="300px" width="500px" style="margin-left: 120px;">
+        <br>
+        <br>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

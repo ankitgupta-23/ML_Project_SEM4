@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Home</title>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="content">
+        <h2>--- Brain Tumor Detection Model ---</h2><br>
+        <p>Brain tumors are one of the most serious diseases in medical science.
+           Effectiveness and efficacy analysis has always been a primary concern 
+           of radiologists in the early stages of tumor development.
+        </p>
+        <p>
+           The biopsy procedure requires the neurosurgeon to drill a small hole into
+           the skull from which the tissue is collected. There are risk factors associated
+           with the biopsy test, including bleeding from the tumor and brain causing
+           infection, stroke, coma, and even death. But the main concern with 
+           the stereotactic biopsy is that it is not 100% accurate which may result
+           in a serious diagnostic error followed by wrong clinical management of the
+           disease.
+        </p>
+        <p>
+            Studies in the recent literature have also reported that automatic 
+            computerized detection and diagnosis of the disease, based on medical 
+            image analysis, could be a good alternative as it would save radiologists 
+            time and also obtain a tested accuracy.
+        </p>
+        <p>
+            Popular machine learning algorithms for classification of are Artificial 
+            Neural Network, Convolutional Neural Network, k-Nearest Neighbour (kNN), 
+            Decision Tree, Support Vector Machine (SVM), Naïve Bayes and 
+            Random Field (RF). This Model is using Convolutional Neural Network (CNN)
+            for the detection and classification of the brain tumor.
+        </p>
+        <p>The model will classify and predict if a patient
+            has a brain tumor or not if given his MRI scan image.
+        </p>
+        <h3>Who should use the Model:</h3>
+        <ul>
+            <li>Only a radiologist or neurologist should use the system</li>
+            <li>Should have well experience in diagnosing brain disease</li>
+        </ul>
+        <h3>Assumptions And Limitation:</h3>
+        <ul>
+            <li>The Input should be valid MRI image of the brain.</li>
+            <li>The results for predicted output will be used with 
+                other factors to achieve a conclusion.
+            </li>
+            <li>The predicted output should not be considered as final
+                conclusion for diagnosis.    
+            </li>
+                
+        </ul>
+    </div>
+
+    {% endblock %}
+</body>
+</html>
